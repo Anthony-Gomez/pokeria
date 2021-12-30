@@ -17,7 +17,7 @@ public class StartingHandController {
     @Autowired
     private CardDecoderService cardDecoderService;
 
-    @GetMapping("/{starting-hand-1}:{starting-hand-2}")
+    @GetMapping("/{starting-hand-1};{starting-hand-2}")
     public ResponseEntity<List<Card>> get(@PathVariable("starting-hand-1") String startingHand1,
                                           @PathVariable("starting-hand-2") String startingHand2) {
 
