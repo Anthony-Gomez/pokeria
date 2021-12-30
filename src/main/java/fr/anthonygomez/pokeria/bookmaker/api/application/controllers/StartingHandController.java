@@ -17,12 +17,19 @@ public class StartingHandController {
     @Autowired
     private CardDecoderService cardDecoderService;
 
+    /**
+     * Get starting hand cards.
+     *
+     * @param firstStartingCard first starting card
+     * @param secondStartingCard second starting card
+     * @return Cards list
+     */
     @GetMapping("/{starting-hand-1};{starting-hand-2}")
-    public ResponseEntity<List<Card>> get(@PathVariable("starting-hand-1") String startingHand1,
-                                          @PathVariable("starting-hand-2") String startingHand2) {
+    public ResponseEntity<List<Card>> get(@PathVariable("starting-card-1") String firstStartingCard,
+                                          @PathVariable("starting-card-2") String secondStartingCard) {
 
-        Card card1 = cardDecoderService.getCardFromInitialAndSymbol(startingHand1);
-        Card card2 = cardDecoderService.getCardFromInitialAndSymbol(startingHand2);
+        Card card1 = cardDecoderService.getCardFromInitialAndSymbol(firstStartingCard);
+        Card card2 = cardDecoderService.getCardFromInitialAndSymbol(secondStartingCard);
 
         return ResponseEntity.ok(Arrays.asList(card1, card2));
     }
