@@ -20,14 +20,14 @@ public class CardDecoderService {
 
     private SuitEnum findSuitEnumFromInitial(String initialToFind) {
         return Arrays.stream(SuitEnum.values())
-                .filter(suiteEnum -> suiteEnum.getInitial().equals(initialToFind))
+                .filter(suiteEnum -> suiteEnum.getInitial().equals(initialToFind.toUpperCase()))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException(initialToFind + " is not a suite initial"));
     }
 
     private ValueEnum findValueEnumFromSymbol(String symbolToFind) {
         return Arrays.stream(ValueEnum.values())
-                .filter(valueEnum -> valueEnum.getSymbol().equals(symbolToFind))
+                .filter(valueEnum -> valueEnum.getSymbol().equals(symbolToFind.toUpperCase()))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException(symbolToFind + " is not a value symbol"));
     }
