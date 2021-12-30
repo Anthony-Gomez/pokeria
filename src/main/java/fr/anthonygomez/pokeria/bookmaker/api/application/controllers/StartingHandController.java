@@ -24,7 +24,7 @@ public class StartingHandController {
      * @param secondStartingCard second starting card
      * @return Cards list
      */
-    @GetMapping("/{starting-hand-1};{starting-hand-2}")
+    @GetMapping("/{starting-card-1};{starting-card-2}")
     public ResponseEntity<List<Card>> get(@PathVariable("starting-card-1") String firstStartingCard,
                                           @PathVariable("starting-card-2") String secondStartingCard) {
 
