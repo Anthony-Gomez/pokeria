@@ -24,9 +24,10 @@ public class StartingHandController {
      * @param secondStartingCard second starting card
      * @return Cards list
      */
-    @GetMapping("/{starting-card-1};{starting-card-2}")
-    public ResponseEntity<List<Card>> get(@PathVariable("starting-card-1") String firstStartingCard,
-                                          @PathVariable("starting-card-2") String secondStartingCard) {
+    @GetMapping("/{first-starting-card},{second-starting-card}")
+    public ResponseEntity<List<Card>> get(
+            @PathVariable("first-starting-card") String firstStartingCard,
+            @PathVariable("second-starting-card") String secondStartingCard) {
 
         Card card1 = cardDecoderService.getCardFromInitialAndSymbol(firstStartingCard);
         Card card2 = cardDecoderService.getCardFromInitialAndSymbol(secondStartingCard);
