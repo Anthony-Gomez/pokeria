@@ -1,8 +1,8 @@
-package fr.anthonygomez.pokeria.bookmaker.api.services.card;
+package fr.anthonygomez.pokeria.bookmaker.api.application.services.card;
 
 import fr.anthonygomez.pokeria.bookmaker.api.application.domains.card.Card;
-import fr.anthonygomez.pokeria.bookmaker.api.application.domains.card.SuitEnum;
-import fr.anthonygomez.pokeria.bookmaker.api.application.domains.card.ValueEnum;
+import fr.anthonygomez.pokeria.bookmaker.api.application.domains.card.enums.SuitEnum;
+import fr.anthonygomez.pokeria.bookmaker.api.application.domains.card.enums.ValueEnum;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;

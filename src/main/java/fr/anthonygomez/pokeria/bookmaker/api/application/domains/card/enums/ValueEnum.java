@@ -1,4 +1,4 @@
-package fr.anthonygomez.pokeria.bookmaker.api.application.domains.card;
+package fr.anthonygomez.pokeria.bookmaker.api.application.domains.card.enums;
 
 public enum ValueEnum {
 

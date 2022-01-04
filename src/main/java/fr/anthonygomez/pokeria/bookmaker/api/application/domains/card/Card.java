@@ -1,15 +1,11 @@
 package fr.anthonygomez.pokeria.bookmaker.api.application.domains.card;
 
-public record Card(ValueEnum value,
-                   SuitEnum suit) {
+import fr.anthonygomez.pokeria.bookmaker.api.application.domains.card.enums.SuitEnum;
+import fr.anthonygomez.pokeria.bookmaker.api.application.domains.card.enums.ValueEnum;
 
-    public ValueEnum getValue() {
-        return value;
-    }
-
-    public SuitEnum getSuit() {
-        return suit;
-    }
+public record Card(
+        ValueEnum value,
+        SuitEnum suit) {
 
     @Override
     public String toString() {
